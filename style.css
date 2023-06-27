@@ -1,0 +1,470 @@
+/* YAZI FONTU EKLEME */
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  /* EVRENSEL */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* padding boslugu ekledigim yapı bozulmuyor */
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 20px auto; /* yukardan ve aŞağıdan 20px, sağdan ve soldan auto */
+  padding: 20px 0px;
+}
+
+.navbar-left {
+  display: flex; /* esnek olarak yatay hale getirir */
+  gap: 40px;
+  align-items: center;
+}
+.navbar-left-logo {
+  /* HEADERDA SOL KISIM ICINDEKI LOGO */
+  font-family: "Indie Flower";
+  text-decoration: none;
+  line-height: 64px; /* SATIR YUKSEKLIGI */
+  font-size: 44px;
+  color: rgb(40, 87, 40);
+}
+.navbar-left-logo:hover {
+  /* LOGONUN UZERINE GELDIGIMDE */
+  transform: scale(1.1);
+  transition: ease 0.5s; /* GERÇEKLEŞTİRME HIZI */
+}
+.navbar-left-menu {
+  /* MENU KISMI */
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.navbar-left-menu a {
+  /* NAVBAR LEFT MENU ICINDEKI HERBİR a ETİKETİ */
+  font-size: 18px;
+  color: gray;
+  text-decoration: none;
+}
+.navbar-left-menu a:first-child {
+  color: black;
+  font-weight: 700;
+}
+.navbar-left-menu a:hover {
+  color: green;
+}
+
+.navbar-right {
+  display: flex;
+  flex-direction: row; /* row:yatay, column:dikey */
+  gap: 20px;
+}
+
+.navbar-right i {
+  cursor: pointer; /* uzerine geldiğimde tıklama işareti */
+  font-size: 22px;
+}
+
+.navbar-right i:hover {
+  /* :hover üzerine geldiğimde */
+  color: gray;
+  transform: scale(1.1); /* scale ile 1.1 kat BUYUR */
+  transition: ease 0.5s;
+}
+
+.banner {
+  display: flex;
+  width: 90%;
+  /* margin: 0px 20px 50px 5px; */
+  /* SAAT YONUNDE - top right bottom left*/
+  margin: auto;
+  border-radius: 20px;
+  background-color: #c1dcdc;
+}
+
+.banner-left {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 40px;
+  padding: 40px 0 40px 50px;
+  z-index: 2;
+}
+
+.banner-left h1 {
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 64px;
+  width: 480px;
+}
+.banner-left h1 span {
+  color: rgb(226, 37, 37);
+}
+.banner-left h1 span:hover {
+  cursor: pointer;
+  color: green;
+  transition: ease 0.5s;
+}
+.banner-left-contents {
+  display: flex;
+  gap: 50px;
+}
+.contents:first-child {
+  /* ILK .contents classina sahip etiketi sectik */
+  border-right: 1px solid black;
+  padding-right: 50px;
+}
+.contents p {
+  font-size: 32px;
+  font-weight: 600;
+}
+.contents span {
+  font-size: 18px;
+}
+
+.banner-left-search {
+  background-color: white;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+  border-radius: 15px;
+}
+.banner-left-search input {
+  border: none;
+  outline: none; /* FOCUSLANDIKTAN SONRAKİ BORDERI KALDIRIR */
+  width: 80%;
+  font-size: 18px;
+}
+
+.banner-left-search i {
+  background-color: #c1dcdc;
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+
+.banner-right {
+  width: 50%;
+  /* RELATIVE ABSOLUTEN HARAKET EDECEĞİ SINIRLARDIR */
+  position: relative; /* BU CERCEVEYI GÖZE ALIR ABSOLUTE */
+}
+
+.banner-right img {
+  position: absolute;
+  /* ABSOLUTE RELATIVIN SINIRLARINA GORE HAREKET EDER KAPASAYICI RELATIVIDER */
+  bottom: 0;
+  transform: scaleX(-1); /* AYNALAMA ile YANSITMA */
+}
+/* IMAGEIN ARKASINA KAHVERENGI ARKA PLAN RENGI VERİLECEK YER */
+.banner-right-bg {
+  position: absolute;
+  background-color: gray;
+  width: 400px;
+  height: 360px;
+  bottom: 0;
+  right: 10%;
+  border-radius: 50% 20% 0px 50%; /* SAAT YÖNÜNDE */
+}
+
+/* PRODUCT */
+.product {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.product-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center; /* KENDI İÇİNDE ORTALAR */
+  margin-top: 40px;
+}
+.more {
+  background-color: #c1dcdc;
+  border: none;
+  padding: 10px;
+  border-radius: 15px;
+}
+.product-card {
+  /* TÜM KARTLARIN KAPSAYICISI */
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.product-cards {
+  /* CART YAPISI */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: start;
+}
+
+.product-cards img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.product-cards p {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.product-cards span {
+  font-size: 18px;
+  color: gray;
+}
+
+/* ABOUT */
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: rgba(134, 126, 126, 0.134);
+  width: 100%;
+  padding: 20px 0;
+}
+.about-title {
+  text-align: center; /* İCİNDEKİNİ ORTALAR */
+}
+.about-title h1 {
+  font-size: 32px;
+}
+.about-title p {
+  font-size: 18px;
+  color: gray;
+}
+.about-card {
+  /* TÜM KARTLARIN KAPSAYICISI */
+  display: flex;
+  align-items: center;
+}
+
+.about-cards {
+  /* HER BIR KART */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-cards i {
+  font-size: 42px;
+  background-color: #c1dcdc;
+  padding: 20px;
+  border-radius: 100%; /* 100% ÇEMBER HALE GETİRİR */
+  margin-bottom: 20px;
+}
+.about-cards p {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.about-cards span {
+  text-align: center; /* KENDİ İCİNDE ORTALAR */
+  /* VERİLEN SATIR SAYISINA GORE  TASAN KISMIN SONUNA ... EKLEME İŞLEMİ */
+  display: -webkit-box;
+  overflow: hidden; /* TASAN KISMI GİZLER */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* SATIR SAYISI */
+}
+
+
+/* KATEGORİLER */
+.categories{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin: 20px auto;
+
+}
+
+.categories-title{
+  margin-bottom: 30px;
+}
+
+.categories-title p{
+  text-align: center;
+}
+.categories-title h1{
+  font-weight: 700;
+  font-size: 32px;
+}
+.categories-banners{
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
+
+.categories-banners-card{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  /* flex:1; */
+}
+.categories-banners-card img{
+  width: 100%;
+}
+.categories-banners-card h1{
+  text-align: center;
+}
+.categories-banners-card span{
+  text-align: center;
+  color: gray;
+  width: 100%;
+}
+
+/* 0 DAN 545px KADAR OLAN KISIM  MESELA MOBİL İÇİN*/
+@media screen and (max-width: 545px) {
+  .categories-banners-card h1{
+      font-size: 20px;
+  }
+  .categories-banners-card span{
+      font-size: 15px;
+  }
+}
+
+
+/* FOOTER */
+.footer{
+    display: flex;
+    flex-direction: row;
+    background-color: #c1dcdc;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+.footer-left{
+    padding: 20px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.footer-left h1{
+    font-family: 'Indie Flower';
+}
+.footer-left p{
+    font-size: 18px;
+    color: black;
+}
+.footer-left-social{/* SOSYAL MEDYALARIN BULUNDUGU CLASS */
+    display: flex;
+    gap: 5px;
+}
+.footer-left-social a{
+    border: 1px solid rgba(134, 126, 126, 0.655);
+    color: #566060;
+    padding: 20px;
+    border-radius: 50%;
+}
+.footer-left-social a:hover{
+    transform: scale(1.1);
+    transition: ease .5s;
+}
+.footer-right{
+    display: flex;
+    gap: 10px;
+    padding-right: 70px ;
+}
+.footer-right ul li{
+    list-style-type: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+.footer-right ul li:nth-child(1){
+    font-weight: 800;
+}
+.footer-right ul li:hover {
+  transform: scale(1.1);
+  color: gray;
+}
+
+/* RESPONSIVE AYARLAR */
+@media screen and (max-width: 900px) {
+  /* 0 - 900px arasinda iken */
+  .banner-left {
+    width: 100%;
+  }
+  .banner-left h1 {
+    background-color: white;
+    opacity: 0.8;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 35px;
+    width: 100%;
+  }
+  .banner-left-contents {
+    background-color: white;
+    opacity: 0.8; /* SAYDAMLIK VERIR */
+    border-radius: 20px;
+    padding: 10px;
+  }
+  .footer{
+    flex-direction: column;
+  }
+  .footer-right{
+    display: none;/* GIZLEME ISLEMI */
+  }
+  .footer-left{
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+  .footer-left-social{
+    
+  }
+}
+
+/* 
+.ornek{
+    width: 200px;
+    height:200px;
+    background-color: green;
+    padding: 60px;
+}
+
+.ornek p {
+    background-color: blue;
+    color: white;
+} */
+
+/* RELATIVE ORNEGI */
+/* .cerceve1{
+    background-color: red;
+    width: 500px;
+    height: 500px;
+
+}
+
+.cerceve2{
+    background-color: blue;
+    padding: 20px;
+    margin: 20px;
+    height: 100%;
+
+}
+
+.cerceve3{
+    background-color: green;
+    color: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+
+} */
