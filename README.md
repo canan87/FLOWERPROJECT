@@ -1,11 +1,11 @@
 <h1>FLOWER PROJECT</h1>
 
-Her türlü bitki satan bir 
+Website that sells all kinds of herbs.
 
 
 
 
 
-<h2> Ekran görüntüsü</h2>
+<h2> Working state of the site </h2>
 
 ![](ekran.gif)
